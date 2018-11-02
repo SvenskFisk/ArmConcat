@@ -1,0 +1,31 @@
+{
+    /*
+    For editors with schema support (Visual Studio Code).
+    */
+    "$schema": "./settingsSchema.json",
+
+    /*  
+    Output files. 
+    Parameters file can be omitted.
+    */
+    "outputTemplateFile": "template.json",
+    "outputParametersFile": "parameters.json",
+
+    /*
+    Input files. 
+    Parameters are renamed "{key}_{parameter name}".
+    Parameters file can be omitted.
+    Resources are concatenated in the order they appear.
+    */
+    "inputs": [{
+            "key": "fil1",
+            "templateFile": "../template1/template.json",
+            "parametersFile": "../template1/parameters.json"
+        },
+        {
+            "key": "fil2",
+            "templateFile": "../template2/template.json",
+            "parametersFile": "../template2/parameters.json"
+        }
+    ]
+}

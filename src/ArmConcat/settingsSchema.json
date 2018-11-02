@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://jamtberg.se/ArmConcat",
+
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "outputTemplateFile": {
+            "type": "string",
+            "default": "./template.json"
+        },
+        "outputParametersFile": {
+            "type": "string",
+            "default": "./parameters.json"
+        },
+        "inputs": {
+            "type": "array",
+            "items": {
+                "properties": {
+                    "key": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "templateFile": {
+                        "type": "string"
+                    },
+                    "parametersFile": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "key",
+                    "templateFile"
+                ]
+            }
+        }
+    },
+    "required": [
+        "outputTemplateFile",
+        "inputs"
+    ],
+    "additionalProperties": false
+}
